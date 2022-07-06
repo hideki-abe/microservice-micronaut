@@ -1,19 +1,18 @@
 package com.zghero.model
 
-import io.micronaut.data.annotation.GeneratedValue
-import io.micronaut.data.annotation.Id
-import io.micronaut.data.annotation.MappedEntity
+import io.micronaut.core.annotation.Introspected
+import javax.persistence.*
 
-import javax.validation.constraints.NotBlank
-
-@MappedEntity
+@Entity
+@Introspected
+@Table(name = 'competencias')
 class Competencia {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id
 
-    @NotBlank
+    @Column(name = 'nome')
     String nome
 
 }

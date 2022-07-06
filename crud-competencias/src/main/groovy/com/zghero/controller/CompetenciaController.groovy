@@ -3,7 +3,6 @@ package com.zghero.controller
 import com.zghero.model.Competencia
 import com.zghero.repository.CompetenciaRepository
 import com.zghero.service.CompetenciaService
-import io.micronaut.core.annotation.Nullable
 import io.micronaut.http.annotation.Body
 import io.micronaut.http.annotation.Controller
 import io.micronaut.http.annotation.Get
@@ -35,7 +34,7 @@ class CompetenciaController {
     }
 
     @Get("/")
-    Iterable<Competencia> list(){
+    List<Competencia> getCompetencias(){
         return competenciaRepository.findAll()
     }
 
