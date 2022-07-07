@@ -1,16 +1,16 @@
 package com.zghero.repository
 
-import com.zghero.model.Competencia
+import com.zghero.model.CandidatoCompetencia
 import io.micronaut.context.annotation.Executable
 import io.micronaut.data.annotation.Repository
 import io.micronaut.data.jpa.repository.JpaRepository
 
 
+
 @Repository
-interface CompetenciaRepository extends JpaRepository<Competencia, Long>{
+interface CandidatoCompetenciaRepository extends JpaRepository<CandidatoCompetencia, Long>{
 
     @Executable
-    List<Competencia> findAll()
-
+    List<CandidatoCompetencia> findAll()
 
 }
